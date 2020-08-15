@@ -9,7 +9,7 @@
     $captcha=$_POST['g-recaptcha-response'];
   }
   if(!$captcha){
-    echo '<h2>Please check the the captcha form.</h2>';
+    echo '<h2>Please check the the captcha form</h2>';
     exit;
   }
   $secretKey = $secret_key;
