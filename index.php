@@ -1,4 +1,4 @@
-<!-- <?php include 'Data/access.php'; ?> -->
+<?php include 'Data/access.php'; ?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -18,10 +18,12 @@
             <input type="text" name="telefono" id="telefono" placeholder="Teléfono"><br>
             <input type="email" name="email" id="email" placeholder="Email" required><br>
             <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje" required></textarea>
-            <div class="g-recaptcha" data-sitekey="<?php echo $site_key; ?>"></div>
-            <input type="submit" value="Enviar">
+            <div class="g-recaptcha" data-sitekey="<?= $site_key; ?>"></div>
+            <input type="submit" name="submit" value="Enviar">
+            <?php if(isset($_GET['error'])): ?>
+               <p id="error">ERROR!</p>
+            <?php endif; ?>
         </form>
-        <!-- <p>Hola: <?php echo $site_key; ?></p> -->
     </div>
 </body>
 </html>
